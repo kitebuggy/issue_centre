@@ -2,7 +2,7 @@
 
 This library is designed to help Ruby/Rails based applications
 communicate with the publicly available API for IssueCentre, as
-provided by First Option Software ({http://www.bespokesoftware.com/}).
+provided by First Option Software (http://www.bespokesoftware.com/).
 
 
 ## Installation
@@ -67,7 +67,7 @@ closed_tickets = ticket_conn.get_closed_tickets( session_key, companies.first[:i
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/issue_centre/fork )
+1. Fork it ( https://github.com/kitebuggy/issue_centre/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
