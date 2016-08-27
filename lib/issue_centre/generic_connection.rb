@@ -27,6 +27,5 @@ module IssueCentre
              log: @log
            )
     end
-
   end
 end

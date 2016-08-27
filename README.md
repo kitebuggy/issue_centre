@@ -30,8 +30,38 @@ require 'rubygems'
 require 'issue_centre'
 
 # Create an authentication client connection to authenticate session
-auth_client = IssueCentre::AuthConnection.new( <IssueCentre Auth URL>)
+auth_conn = IssueCentre::AuthConnection.new( "<IssueCentre Auth URL>")
 
+# Collect all applicable contracts
+contracts = auth_conn.get_contracts( "<username>", "<password>")
+
+
+# Obtain a session key for a relevant contract
+session_key = auth_conn.generate_key( "<username>", "<password>", contracts.last[:id])
+
+# Create a customer connection (note this is usually a different URL)
+cust_conn = IssueCentre::CustomerConnection.new( "<IssueCentre Customer URL>"), session_key)
+
+# Grab a list of all companies (you can also search with a wildcard)
+companies = cust_conn.get_companies( session_key)
+
+# or using a wildcard to find companies beginning with "British"...
+companies = cust_conn.get_companies( session_key, "British*")
+
+# Grab a list of all contacts (you can also search with a wildcard)
+contacts = cust_conn.get_contacts( session_key)
+
+# Grab a list of all countries
+countries = cust_conn.get_countries( session_key)
+
+# Create a ticket connection (note this is usually a different URL)
+ticket_conn = IssueCentre::TicketConnection.new( "<IssueCentre Ticket URL>", session_key)
+
+# Grab a list of open tickets for the specified company
+open_tickets = ticket_conn.get_open_tickets( session_key, companies.first[:id], 100, 1)
+
+# Grab a list of closed tickets for the specified company
+closed_tickets = ticket_conn.get_closed_tickets( session_key, companies.first[:id], 100, 1)
 
 ```
 

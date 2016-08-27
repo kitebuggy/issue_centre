@@ -27,6 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "faraday"
   spec.add_dependency "savon", "~> 2.0"
-  spec.add_dependency "active_hash"
   spec.add_dependency "activesupport"
 end
