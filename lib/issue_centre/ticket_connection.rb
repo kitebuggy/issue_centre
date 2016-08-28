@@ -4,7 +4,7 @@ module IssueCentre
     # Connection client for authenticating and retrieving ticket
     # information from IssueCentre
     #
-    # @param [String] endpoint_url IssueCentre endpoint url (e.g.
+    # @param [String] customer_url IssueCentre endpoint url (e.g.
     #   {https://support.callclosed.net/issuecentre/Customer})
     #
     # @param [String] session_key SessionKey for this session
@@ -46,7 +46,7 @@ module IssueCentre
 
     # Return (closed) tickets from IssueCentre for this contract
     #
-    # @param [SessionKey] session SessionKey object
+    # @param [SessionKey] session_key SessionKey object
     #
     # @param [Integer] company_id A Company ID for the function to
     #   return closed tickets for.  Zero returns a list of all closed
@@ -71,9 +71,9 @@ module IssueCentre
 
     # Return all events from IssueCentre for this ticket
     #
-    # @param [String] session SessionKey object
+    # @param [String] session_key SessionKey object
     #
-    # @param [Integer] ticket Ticket ID for the required ticket
+    # @param [Integer] ticket_id Ticket ID for the required ticket
     #
     # @return [Array] An array of events and details as hashes
     #    

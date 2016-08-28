@@ -5,10 +5,8 @@ module IssueCentre
     # @see AuthConnection
     # @see CustomerConnection
     #
-    # @param [String] endpoint_url IssueCentre endpoint url
+    # @param [String] base_url IssueCentre endpoint url
     #   (e.g. {https://support.callclosed.net/issuecentre/Connection})
-    # @param [String] username A valid IssueCentre username
-    # @param [String] password A valid IssueCentre password
     # @param [Hash] options Other options to pass to the constructors
     #
     # @return [Connection] instance of Connection

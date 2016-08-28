@@ -36,4 +36,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday"
   spec.add_dependency "savon", "~> 2.0"
   spec.add_dependency "activesupport"
+
+  spec.has_rdoc = 'yard'
 end

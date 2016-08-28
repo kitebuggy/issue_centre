@@ -4,7 +4,7 @@ module IssueCentre
     # Connection client for authenticating and retrieving customer
     # information from IssueCentre
     #
-    # @param [String] endpoint_url IssueCentre endpoint url
+    # @param [String] customer_url IssueCentre endpoint url
     #   (e.g. {https://support.callclosed.net/issuecentre/Customer})
     # @param [String] session_key SessionKey for this session
     # @param [Hash] options Other options to pass to the constructors

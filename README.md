@@ -63,6 +63,10 @@ open_tickets = ticket_conn.get_open_tickets( session_key, companies.first[:id], 
 # Grab a list of closed tickets for the specified company
 closed_tickets = ticket_conn.get_closed_tickets( session_key, companies.first[:id], 100, 1)
 
+# Grab a list of events for the specified ticket
+events = ticket_conn.get_events_for_ticket( session_key, closed_tickets.last[:id])
+
+
 ```
 
 ## Contributing

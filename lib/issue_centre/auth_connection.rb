@@ -4,9 +4,9 @@ module IssueCentre
     # Connection client for authenticating and retrieving contracts
     # from IssueCentre
     #
-    # @param [String] endpoint_url IssueCentre endpoint url
+    # @param auth_url [String] IssueCentre endpoint url
     #   (e.g. {https://support.callclosed.net/issuecentre/Connection})
-    # @param [Hash] options Other options to pass to the constructors
+    # @param options [Hash] Other options to pass to the constructors
     #
     # @return [AuthConnection] Instance of AuthConnection client
     #
