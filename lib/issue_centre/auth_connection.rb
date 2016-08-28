@@ -19,7 +19,8 @@ module IssueCentre
     # @param [String] username A valid user in IssueCentre
     # @param [String] password A valid password in IssueCentre
     #
-    # @return [Response] A Response object
+    # @return [Array] A array of valid contract hashes, one of which
+    #   may be marked as the default contract.
     #    
     def get_contracts( username, password)
       response_xml = self.call( :get_contracts, message: {
@@ -29,6 +30,7 @@ module IssueCentre
       response = IssueCentre::Response.parse( response_xml)
     end
 
+    
     # Generate a contract-specific session key for this user from IssueCentre
     #
     # @param [String] username A valid user in IssueCentre

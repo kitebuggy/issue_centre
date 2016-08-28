@@ -17,15 +17,15 @@ module IssueCentre
     end
 
 
-    # Create companies from IssueCentre for this contract
+    # Return companies from IssueCentre for this contract
     #
     # @param [String] session_key SessionKey for this session
     #
     # @param [String] wildcard The wildcard used to match the company
-    # names.  E.g. 'a*', 'Brit?sh'.  The wildcard is case
-    # insensitive. An empty string will return all companies.
+    #   names.  E.g. 'a*', 'Brit?sh'.  The wildcard is case
+    #   insensitive. An empty string will return all companies.
     #
-    # @return [Response] A Response object
+    # @return [Array] An array of companies and details as hashes
     #    
     def get_companies( session_key, wildcard = '')
       response_xml = self.call( :get_companies, message: {
@@ -36,19 +36,19 @@ module IssueCentre
     end
 
     
-    # Create contacts from IssueCentre for this contract
+    # Return contacts from IssueCentre for this contract
     #
     # @param [String] session_key SessionKey for this session
     #
     # @param [Integer] company_id The numeric ID of the company for
-    # which to return contacts for.  Defaults to returning all
-    # contacts for all companies.
+    #   which to return contacts for.  Defaults to returning all
+    #   contacts for all companies.
     #
     # @param [String] wildcard The wildcard used to match the contact
-    # names.  E.g. 'Ala?', 'Jas*'.  The wildcard is case
-    # insensitive. An empty string will return all contacts.
+    #   names.  E.g. 'Ala?', 'Jas*'.  The wildcard is case
+    #   insensitive. An empty string will return all contacts.
     #
-    # @return [Response] A Response object
+    # @return [Array] An array of contacts and details as hashes
     #    
     def get_contacts( session_key, company_id = 0, wildcard = '')
       response_xml = self.call( :get_contacts, message: {
@@ -60,11 +60,11 @@ module IssueCentre
     end
 
     
-    # Create countries from IssueCentre for this contract
+    # Return countries from IssueCentre for this contract
     #
     # @param [String] session_key SessionKey for this session
     #
-    # @return [Response] A Response object
+    # @return [Array] An array of countries and details as hashes
     #    
     def get_countries( session_key)
       response_xml = self.call( :get_countries, message: {

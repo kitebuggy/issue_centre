@@ -5,11 +5,10 @@ module IssueCentre
       
       # Parse the response retrieved during any request.
       #
-      # @param [XML] savon_response Savon's representation of the
-      # response
+      # @param [XML] savon_response Savon's representation of the response
       #
       # @param [Hash] options Any default attributes that should be
-      # added to the model
+      #   added to the model
       # 
       # @return [Array] Array of hashes with combined response details
       #
@@ -54,8 +53,8 @@ module IssueCentre
       # @param [Hash] obj Object to be built (or being built)
       # 
       # @return [Array] Array of hashes representing the XML objects
-      # @return [Hash] Hash representing the last object being built
-      # (which may be empty)
+      # @return [Hash] Hash representing the last object being built (which
+      #   may be empty)
       #
       def recurse_and_build_model( fragment, model_name, arr, obj)
         fragment.elements.each do |element|

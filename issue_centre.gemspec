@@ -8,9 +8,17 @@ Gem::Specification.new do |spec|
   spec.version       = IssueCentre::VERSION
   spec.authors       = ["Jason Holloway"]
   spec.email         = ["jason_holloway@mac.com"]
-  spec.summary       = %q{Gem to wrap the IssueCentre API.}
-  spec.description   = %q{Gem to wrap the IssueCentre API.}
-  spec.homepage      = ""
+
+  spec.summary = %q{Gem to wrap the IssueCentre API, as published at
+  www.issuecentre.com by First Option Software Ltd.}
+
+  spec.description = %q{IssueCentre allows you to record, manage and
+  solve helpdesk issues. Features include intelligent search, advanced
+  ticket and SLA management, email integration, and multi-branding.
+  This gem provides a convenient interface for the API calls to an
+  IssueCentre back-end.}
+
+  spec.homepage      = "https://github.com/kitebuggy/issue_centre"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
