@@ -66,7 +66,7 @@ closed_tickets = ticket_conn.get_closed_tickets( session_key, companies.first[:i
 # Grab a list of events for the specified ticket
 events = ticket_conn.get_events_for_ticket( session_key, closed_tickets.last[:id])
 
-
+# And many more... (don't forget to check the docs for a full list!)
 ```
 
 ## Contributing

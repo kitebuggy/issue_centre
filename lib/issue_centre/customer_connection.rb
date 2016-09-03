@@ -73,5 +73,9 @@ module IssueCentre
                                 })
       response = IssueCentre::Response.parse( response_xml)
     end
+
+    # @todo Not implemented yet: createContact, createCompany,
+    # updateContact, updateCompany
+    
   end
 end

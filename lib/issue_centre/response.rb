@@ -72,7 +72,7 @@ module IssueCentre
             obj[ :country_id] = attr.value
           when 'isDefault'
             obj[ :is_default] = attr.value == "1"
-          when 'ticketCount', 'changeType', 'supportType'
+          when 'ticketCount', 'changeType', 'supportType', 'totalrecords'
             # skip (we don't need summaries)
           else
             obj[ attr.name.underscore.to_sym] = attr.value

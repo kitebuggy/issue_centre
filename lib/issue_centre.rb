@@ -10,6 +10,7 @@ require 'issue_centre/exception'
 require 'issue_centre/generic_connection'
 require 'issue_centre/auth_connection'
 require 'issue_centre/customer_connection'
+require 'issue_centre/contract_connection'
 require 'issue_centre/ticket_connection'
 require 'issue_centre/response'
 
