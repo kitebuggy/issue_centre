@@ -126,8 +126,8 @@ module IssueCentre
     # @param [String] ticket_reference Ticket reference to search for
     #   ("" returns tickets for all references)
     #
-    # @param [String] owner Ticket owner to limit search by
-    #   ("" returns tickets for all references)
+    # @param [Integer] owner_id Ticket Owner ID to limit search by
+    #   (0 returns tickets for all references)
     #
     # @param [String] client_reference Client reference to search for
     #   ("" returns tickets for all references)
